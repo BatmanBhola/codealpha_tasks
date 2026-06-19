@@ -1,0 +1,4 @@
+{"event_type": "alert", "src_ip": "10.0.0.1", "alert": {"signature": "Attack1", "severity": 1}, "expected_label": "malicious"}
+{"event_type": "alert", "src_ip": "10.0.0.2", "alert": {"signature": "LowSeverity", "severity": 2}, "expected_label": "benign"}
+{"event_type": "flow", "src_ip": "10.0.0.3", "expected_label": "benign"}
+{"event_type": "alert", "alert": {"signature": "NoSrc", "severity": 1}, "expected_label": "malicious"}
