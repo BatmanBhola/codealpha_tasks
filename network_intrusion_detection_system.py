@@ -82,7 +82,6 @@ def process_log_line(line):
     signature = alert_info.get('signature')
     severity = alert_info.get('severity')
 
-    # Normalize severity to integer when possible
     try:
         sev_int = int(severity) if severity is not None else None
     except (ValueError, TypeError):
@@ -160,7 +159,6 @@ if __name__ == "__main__":
                         elif action == 'warn':
                             logging.warning("Alert severity 1 but src_ip missing; cannot block")
                     if not found:
-                        # line didn't contain valid JSON objects
                         continue
 
         process_file_once(args.log)
